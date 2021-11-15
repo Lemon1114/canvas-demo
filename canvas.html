@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
     <title>Canvas的使用</title>
     <style>
       * {
@@ -14,9 +17,23 @@
         width: 100vw;
         height: 100vh;
       }
+      h1 {
+        position: absolute;
+        margin: 0 20px;
+        text-align: center;
+        color: #e56048;
+        z-index: -90;
+      }
+      @media screen and (max-width: 600px) {
+        /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+        body {
+          overflow: hidden;
+        }
+      }
     </style>
   </head>
   <body>
+    <h1>按下鼠标左键并移动，开始画画吧！</h1>
     <canvas id="canvas"></canvas>
 
     <script>
